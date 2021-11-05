@@ -725,7 +725,8 @@ class Optimiser(object):
                              **kwargs)
       n_itr = 0
       while self.optimise_partition(partition) > 0 and \
-        (n_itr < number_iterations or number_iterations <= 0):
+        # (n_itr < number_iterations or number_iterations <= 0):
+        (n_itr < 1 or number_iterations <= 0):
         n_itr += 1
       return partition
 
